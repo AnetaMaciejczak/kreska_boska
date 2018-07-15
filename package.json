@@ -1,0 +1,37 @@
+{
+  "name": "war_fer_s_36_react_react",
+  "version": "1.0.0",
+  "description": "<img alt=\"Logo\" src=\"https://coderslab.pl/svg/logo-coderslab.svg\" width=\"400\">",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "./node_modules/.bin/webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnetaMaciejczak/WAR_FER_S_36_REACT_React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnetaMaciejczak/WAR_FER_S_36_REACT_React/issues"
+  },
+  "homepage": "https://github.com/AnetaMaciejczak/WAR_FER_S_36_REACT_React#readme",
+  "dependencies": {
+    "es6-promise": "^4.2.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^2.1.5",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
