@@ -1,0 +1,11 @@
+.body {
+  background-color: map-get($colors, start_bacground);
+}
+.start_img_holder {
+  margin: 15% auto;
+  height: 15rem;
+  width: 30rem;
+  #start_logo {
+    width: 100%;
+  }
+}

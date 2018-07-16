@@ -1,0 +1,67 @@
+body {
+  background-color: map-get($colors, home_background);
+  font-family: 'Quicksand', sans-serif;
+}
+
+#home_header_holder_logo {
+  max-width: 15%;
+  display: inline-block;
+  position: fixed;
+  left: 30px;
+  top: 15px;
+}
+
+#home_header_logo {
+  width: 100%;
+
+}
+
+.home_header_menu {
+  display: inline-block;
+  text-align: right;
+  position: fixed;
+  right: 30px;
+  top: 15px;
+  font-size: 16px;
+
+  li {
+    list-style: none;
+    margin: 3px;
+  }
+  a {
+    text-decoration: none;
+    color: map-get($colors, text);
+  }
+
+}
+.home_gallery {
+  justify-content: space-between;
+
+  .home_gallery_holder_img {
+
+
+  }
+
+  .home_gallery_img {
+    margin-top: 10rem;
+    width: 90%;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+}
+
+.home_footer {
+  color: map-get($colors, text);
+  font-size: 25px;
+  position: fixed;
+  left: 30px;
+  bottom: 15px;
+  .fas {
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+    font-size: 50px;
+    color: map-get($colors, text);
+  }
+}
