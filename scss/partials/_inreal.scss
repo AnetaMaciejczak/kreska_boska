@@ -1,16 +1,11 @@
-body {
-  background-color: map-get($colors, home_background);
-  font-family: 'Quicksand', sans-serif;
-}
-
-.home_gallery {
+.inreal_gallery {
   justify-content: space-between;
 
-  .home_gallery_holder_img {
+  .inreal_gallery_holder_img {
 
   }
 
-  .home_gallery_img {
+  .inreal_gallery_img {
     margin-top: 10rem;
     width: 90%;
     -webkit-box-shadow: 0 10px 6px -6px #777;

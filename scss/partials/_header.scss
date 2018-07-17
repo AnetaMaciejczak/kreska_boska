@@ -1,0 +1,60 @@
+.about_header {
+  background-color: map-get($colors, #E1E1E1);
+}
+
+#header_holder_logo {
+  max-width: 15%;
+  display: inline-block;
+  position: fixed;
+  left: 30px;
+  top: 15px;
+}
+
+#header_logo {
+  width: 100%;
+}
+
+#header_holder_sign {
+  max-width: 15%;
+  display: inline-block;
+  position: fixed;
+  left: 15rem;
+  top: 15px;
+  #header_logo_sign{
+    width: 100%;
+  }
+
+}
+
+.header_hamburger {
+  font-size: 3rem;
+  position: fixed;
+  right: 30px;
+  top: 15px;
+  color: map-get($colors, text);
+  cursor: pointer;
+  &:hover {
+    font-size: 4rem;
+    transition: 0.5s;
+    opacity: 0.5;
+  }
+}
+
+
+.header_menu {
+  display: inline-block;
+  text-align: right;
+  position: fixed;
+  right: 90px;
+  top: 10px;
+  font-size: 17px;
+  //visibility: hidden;
+  li {
+    list-style: none;
+    margin: 3px;
+  }
+  a {
+    text-decoration: none;
+    color: map-get($colors, text);
+  }
+}

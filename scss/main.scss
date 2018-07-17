@@ -1,7 +1,16 @@
+@import "partials/reset";
+
 @import "module/colors";
 @import "module/mixins";
+
 @import "partials/base";
-@import "partials/reset";
+@import "partials/header";
+@import "partials/footer";
+
 @import "partials/start";
 @import "partials/home";
+@import "partials/inreal";
+@import "partials/about";
+@import "partials/contact";
+
 

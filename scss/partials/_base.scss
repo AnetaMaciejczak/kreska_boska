@@ -4,6 +4,11 @@
   //font-family: 'Advent Pro', sans-serif;
 }
 
+body {
+  background-color: map-get($colors, inreal_backgraund);
+  font-family: 'Quicksand', sans-serif;
+}
+
 .container {
   max-width: 950px;
   margin: 0 auto;

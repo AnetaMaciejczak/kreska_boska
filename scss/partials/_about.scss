@@ -1,0 +1,27 @@
+//body {
+//  background-color: map-get($colors, about_backgraund);
+//}
+
+
+
+.about {
+  margin-top: 8rem;
+  justify-content: space-between;
+
+  .col-6 {
+    padding: 1rem;
+    .about_text {
+      color: map-get($colors, text);
+    }
+  }
+  .about_holder_img {
+    .about_img {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+
