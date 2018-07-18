@@ -29,18 +29,6 @@
     }
   }
 
-  .fas {
-    position: fixed;
-    cursor: pointer;
-    right: 30px;
-    bottom: 15px;
-    font-size: 50px;
-    color: map-get($colors, text);
-    &:hover {
-      font-size: 35px;
-      transition: 0.5s;
-      opacity: 0.8;
-    }
-  }
+
 
 }

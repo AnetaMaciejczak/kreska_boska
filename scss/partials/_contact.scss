@@ -1,6 +1,7 @@
 .contact_container {
   margin-top: 8rem;
   justify-content: space-between;
+  color: map-get($colors, text);
   .about_holder_text,
   .about_holder_form {
     .form {
@@ -11,20 +12,31 @@
       label {
         display: block;
         margin: 1rem;
-        input {
+        width: 60%;
+        input,
+        textarea {
           margin-top: 1rem;
           border-radius: 5px;
           box-shadow: none;
           border: none;
-          line-height: 1rem;
-          padding: 1rem;
+          padding: 0.6rem;
           width: 100%;
+          overflow: auto;
+        }
+      }
+      .form_input_msg_holder {
+        height: 10rem;
+        .form_input_msg {
+          height: 70%;
         }
       }
     }
   }
 }
 
+.abut_holder_text {
+  padding: 3rem;
+}
 .form_button_submit {
 
   border-radius: 4px;
@@ -41,6 +53,7 @@
   position: relative;
 
   &:hover {
+    content: ">>";
     padding-right: 25px;
     opacity: 1;
     right: 0;

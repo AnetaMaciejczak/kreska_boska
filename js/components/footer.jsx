@@ -6,17 +6,18 @@ class Footer extends React.Component {
 
             <footer className="footer">
                 <div className="container">
-                    <span className="footer_facebook_icon">
+                    <a href="https://www.facebook.com/KreskaBoska/"
+                       target="_blank"
+                       className="footer_facebook_icon">
                     <i className="fab fa-facebook-square"></i>
-                    </span>
+                    </a>
 
-                    <span className="footer_instagram_icon">
+                    <a href="https://www.instagram.com/kreska.boska/"
+                       target="_blank"
+                       className="footer_instagram_icon">
                     <i className="fab fa-instagram"></i>
-                    </span>
+                    </a>
 
-                    <span>
-                    <i className="fas fa-angle-double-down"></i>
-                    </span>
                 </div>
             </footer>
 

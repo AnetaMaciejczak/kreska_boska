@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from "axios";
 
 
 class Form extends React.Component {
@@ -7,8 +8,19 @@ class Form extends React.Component {
         this.state = {
             name: '',
             email: '',
-            msg: ''
+            msg: '',
+            validName: "" ,
+            validEmail: "",
+            validMsg: "",
+            ValidEndText: "",
+            validEnd: true
+
         };
+/*        this.handleNameChange = this.handleNameChange.bind(this)
+        this.handleEmailChange = this.handleEmailChange.bind(this)
+        this.handleMsgChange = this.handleMsgChange.bind(this)
+        this.sendData = this.sendData.bind(this)*/
+
     }
 
     handleNameChange = (event) => {
@@ -23,9 +35,70 @@ class Form extends React.Component {
         });
     };
 
-    sendData = (event) => {
+    /*async */sendData = (event) => {
         event.preventDefault();
-        console.log(this.state)
+      /*  const {name, email, msg} = this.state;*/
+
+     /*   const form = await axios.post("/api/form", {
+            name:
+            email:
+            msg:
+        })*/
+
+        if(this.state.name.length === 0) {
+            this.setState ({
+                validName: " /Uzupełnij to pole",
+                validEnd: false
+
+            })
+        } else {
+            this.setState ({
+                validName: "",
+                validEnd: true
+            })
+        }
+
+        if(this.state.msg.length === 0) {
+            this.setState ({
+                validMsg: " /Uzupełnij to pole",
+                validEnd: false
+            })
+        } else {
+            this.setState ({
+                validMsg: "",
+                validEnd: true
+            })
+        }
+
+        if(this.state.email.includes("@") === false) {
+            this.setState ({
+                validEmail: " /Uzupełnij to pole",
+                validEnd: false
+            })
+        } else {
+            this.setState ({
+                validEmail: "",
+                validEnd: true
+            })
+        }
+        console.log(this.state.validEnd);
+
+        if(this.state.validEnd = true) {
+            this.setState ({
+                validEndText: "Dziękujemy za wiadomość",
+            })
+        } else {
+            this.setState ({
+                validEndText: "",
+
+            })
+        }
+        console.log(this.state.validEndText);
+    }
+    
+
+    handleKeyUp(event) {
+        if (event.keyCode == 13)  return this.sendData()
     }
 
     handleMsgChange = (event) => {
@@ -35,9 +108,10 @@ class Form extends React.Component {
     };
     render(){
         return (
-            <form onSubmit={this.sendData} className={"form"}>
+            <form onSubmit={this.sendData} className={"form"}
+                  onKeyUp={this.handleKeyUp}>
                 <label>
-                    Imię i Nazwisko: <br/>
+                    Imię i Nazwisko: {this.state.validName}<br/>
                     <input
                         type="text"
                         value={this.state.name}
@@ -46,7 +120,7 @@ class Form extends React.Component {
                     />
                 </label>
                 <label>
-                    E-mail:<br/>
+                    E-mail: {this.state.validEmail}<br/>
                     <input
                         type="text"
                         value={this.state.email}
@@ -54,12 +128,12 @@ class Form extends React.Component {
                         className={"form_input_email"}
                     />
                 </label>
-                <label>
-                    Wiadomość: <br/>
-                    <input
-                        type="textarea"
-                        cols="20"
-                        rows="8"
+                <label className="form_input_msg_holder">
+                    Wiadomość:{this.state.validMsg} <br/>
+                    <textarea
+                        rows="14"
+                        cols="10"
+                        wrap="soft"
                         value={this.state.msg}
                         onChange={this.handleMsgChange}
                         className={"form_input_msg"}
@@ -84,8 +158,10 @@ class Contact extends React.Component {
                         <div className="col-6 about_holder_text">
                             <p className="contact_text">
                                 Jeśli chcesz się ze mną coś narysować,
-                                <hr/>
                                     And God said, “it is good, she and I will dance.”
+                            </p>
+                            <p>
+                                {/*{this.state.validEndText}*/}
                             </p>
                         </div>
                         <div className="col-6 about_holder_form">
