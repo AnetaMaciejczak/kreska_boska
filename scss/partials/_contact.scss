@@ -2,7 +2,15 @@
   margin-top: 8rem;
   justify-content: space-between;
   color: map-get($colors, text);
+  @include mobile {
+    margin-top: 5rem;
+  }
   .about_holder_text,
+  .contact_text {
+    @include mobile{
+      padding: 10px;
+    }
+  }
   .about_holder_form {
     .form {
       display: flex;

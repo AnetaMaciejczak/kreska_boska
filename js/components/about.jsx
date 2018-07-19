@@ -27,10 +27,12 @@ class About extends React.Component {
                                 Uprzejmie przypominam o jej pięknej duszy i świętym ogniu, który w niej płonie! <br/>
                                 <hr/>
                                     And God said, “it is good, she and I will dance.”
+
                             </p>
                         </div>
                         <div className="col-6 about_holder_img">
                             <img className="about_img" src="./img/about.png" alt=""/>
+                            <img id="about_sign" src="./img/sign.png" alt=""/>
                         </div>
                     </div>
                 </div>

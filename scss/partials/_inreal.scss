@@ -1,12 +1,17 @@
 .inreal_gallery {
   justify-content: space-between;
+  flex-wrap: wrap;
+
+
+  margin-bottom: 6.5rem;
 
   .inreal_gallery_holder_img {
-
   }
 
   .inreal_gallery_img {
-    margin-top: 10rem;
+
+
+    margin-top: 7rem;
     width: 90%;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
@@ -25,4 +30,21 @@
     //}
 
   }
+  .inreal_gallery_title {
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
 }
+ .downInreal {
+   position: fixed;
+   height: 2rem;
+   right: 30px;
+   bottom: 15px;
+   opacity: 0.8;
+   &:hover {
+     height: 2.5rem;
+     transition: 0.5s;
+     opacity: 0.3;
+   }
+ }
