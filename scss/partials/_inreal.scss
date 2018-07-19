@@ -36,9 +36,44 @@
    right: 30px;
    bottom: 15px;
    opacity: 0.8;
-   &:hover {
+     &:hover {
+       height: 2.5rem;
+       transition: 0.5s;
+       opacity: 0.3;
+     }
+ }
+
+ .upInreal {
+   position: fixed;
+   bottom: 4rem;
+   right: 2rem;
+   height: 2rem;
+   opacity: 0.8;
+     &:hover {
      height: 2.5rem;
      transition: 0.5s;
      opacity: 0.3;
    }
  }
+
+
+.galleryImgZoomInreal {
+  position: fixed;
+  max-width: 25rem;
+  left: 33%;
+  top: -15%;
+  z-index: 996;
+  transition: all 0.7s;
+  zoom: 300%;
+  opacity: 1;
+  @include mobile {
+    position: relative;
+    max-width: 90%;
+    left: 0;
+    top: 0;
+    z-index: 996;
+    transition: all 0.7s;
+    zoom: 300%;
+    opacity: 1;
+  }
+}

@@ -4,6 +4,7 @@ import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } 
 class Inreal extends React.Component {
     constructor(props) {
         super(props)
+        this.scrollToTop = this.scrollToTop.bind(this);
         this.state = {
             active: 3,
             targetZoomInreal: -1,
@@ -13,14 +14,14 @@ class Inreal extends React.Component {
 
     handleClick = () => {
         if(this.state.active < this.props.data.length){
-            if (this.props.data.length % 3 === 0) {
+            // if (this.props.data.length % 3 === 0) {
                 this.setState({
                     active: this.props.data.length % 3 === 0 ?
                         this.state.active + 3:
                         this.state.active + (this.props.data.length - this.state.active),
                     targetZoomInreal: -1
                 })
-            }
+            // }
         }
     }
     handleClickImg = (e, i) => {
@@ -63,9 +64,9 @@ class Inreal extends React.Component {
         Events.scrollEvent.remove('begin');
         Events.scrollEvent.remove('end');
     }
-    // scrollToTop = () => {
-    //     scroll.scrollToTop();
-    // }
+    scrollToTop = () => {
+        scroll.scrollToTop();
+    }
     // scrollToBottom = () => {
     //     scroll.scrollToBottom();
     // }
@@ -115,6 +116,10 @@ class Inreal extends React.Component {
                         {arrActivInreal}
                     </div>
                 </div>
+                <a onClick={this.scrollToTop}>
+                    <img className="upInreal"
+                         src= "../../img/angle-up.png"/>
+                </a>
                 <Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
                 <img className="downInreal"
                      src= "../../img/if_angle-double-down.png"

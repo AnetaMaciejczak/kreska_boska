@@ -34,7 +34,6 @@ class Header extends React.Component {
                     <header className="header">
                         <p id="header_holder_logo">
                             <img id="header_logo" src="../../img/logo_line.png" alt=""/>
-
                         </p>
 
                         <img    className ="header_hamburger"

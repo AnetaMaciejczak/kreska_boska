@@ -1,5 +1,5 @@
 .contact_container {
-  margin-top: 8rem;
+  margin-top: 6rem;
   justify-content: space-between;
   color: map-get($colors, text);
   @include mobile {
@@ -10,6 +10,9 @@
     @include mobile{
       padding: 10px;
     }
+  }
+  .about_holder_text {
+    padding: 2rem;
   }
   .about_holder_form {
     .form {

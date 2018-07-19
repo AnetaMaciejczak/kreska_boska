@@ -60,24 +60,3 @@ body {
     opacity: 1;
   }
 }
-
-.galleryImgZoomInreal {
-  position: fixed;
-  max-width: 25rem;
-  left: 33%;
-  top: -13%;
-  z-index: 996;
-  transition: all 0.7s;
-  zoom: 300%;
-  opacity: 1;
-  @include mobile {
-    position: relative;
-    max-width: 90%;
-    left: 0;
-    top: 0;
-    z-index: 996;
-    transition: all 0.7s;
-    zoom: 300%;
-    opacity: 1;
-  }
-}
