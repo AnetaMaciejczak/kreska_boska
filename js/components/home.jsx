@@ -18,7 +18,8 @@ class Home extends React.Component {
                 this.setState({
                     active: this.props.data.length % 3 === 0 ?
                             this.state.active + 3:
-                            this.state.active + (this.props.data.length - this.state.active)
+                            this.state.active + (this.props.data.length - this.state.active),
+                    targetZoom: -1
                 })
             }
         }
@@ -86,16 +87,14 @@ class Home extends React.Component {
                    let data = this.props.data[i].content;
 
                    const isZoom = this.state.targetZoom === i ? "galleryImgZoom" : "";
-
                    const isOpacity = this.state.targetOpacity === i ? "galleryOpacity" : "";
 
                    let allClass = `${isOpacity} home_gallery_img ${isZoom}`
 
 
-                   const elem =  <div className="col-4 home_gallery_holder_img">
+                   const elem =  <div  key={[i]} className="col-4 home_gallery_holder_img">
 
                                    <img
-                                        key={[i]}
                                         onMouseEnter={e => this. handleMouseEnter( e, i )}
                                         onMouseLeave={e => this. handleMouseLeve( e, i )}
                                         onClick={e => this.handleClickImg( e, i )}

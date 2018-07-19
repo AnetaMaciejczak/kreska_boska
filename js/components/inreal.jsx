@@ -5,26 +5,50 @@ class Inreal extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            active: 3
+            active: 3,
+            targetZoomInreal: -1,
+            targetOpacityInreal: -1,
         }
     }
 
     handleClick = () => {
-        if (this.props.data.length % 3 === 0) {
-            this.setState({
-                active: this.state.active + 3
-            })
-        } else if (this.props.data.length === this.state.active) {
-            console.log( "jestem równy");
+        if(this.state.active < this.props.data.length){
+            if (this.props.data.length % 3 === 0) {
+                this.setState({
+                    active: this.props.data.length % 3 === 0 ?
+                        this.state.active + 3:
+                        this.state.active + (this.props.data.length - this.state.active),
+                    targetZoomInreal: -1
+                })
+            }
+        }
+    }
+    handleClickImg = (e, i) => {
+        if (this.state.targetZoomInreal !== i) {
             this.setState ({
-                active: this.state.active
+                targetZoomInreal: i,
+                targetOpacityInreal: -1
             })
-        }else {
-            this.setState({
-                active: this.state.active + (this.props.data.length - this.state.active)
+        } else {
+            this.setState ({
+                targetZoomInreal: -1
             })
         }
     }
+
+    handleMouseEnter = (e, i) => {
+        this.setState ({
+            targetOpacityInreal: i
+        })
+    }
+
+    handleMouseLeve =(e, i) => {
+        this.setState ({
+            targetOpacityInreal: -1,
+        })
+    }
+
+
 
     componentDidMount () {
         Events.scrollEvent.register('begin', function(to, element) {
@@ -58,13 +82,26 @@ class Inreal extends React.Component {
 
     render() {
         const arrActivInreal = [];
+
         if( this.props.data.length > 0 ) {
+
             for (let i = 0; i < this.state.active; i++) {
                 let data = this.props.data[i].content;
+
+                const isZoom = this.state.targetZoomInreal === i ? "galleryImgZoomInreal" : "";
+                const isOpacity = this.state.targetOpacityInreal === i ? "galleryOpacity" : "";
+
+                let allClass = `${isOpacity} inreal_gallery_img ${isZoom}`
+
                 const elem =  <div key={[i]} className="col-4 inreal_gallery_holder_img">
-                    <img src={data.image} className="inreal_gallery_img"/>
-                    <h1 className="inreal_gallery_title">{data.title}</h1>
-                </div>;
+                                <img
+                                    onMouseEnter={e => this. handleMouseEnter( e, i )}
+                                    onMouseLeave={e => this. handleMouseLeve( e, i )}
+                                    onClick={e => this.handleClickImg( e, i )}
+                                    src={data.image}
+                                    className={allClass}/>
+                                <h1 className="inreal_gallery_title">{data.title}</h1>
+                            </div>;
                 arrActivInreal.push(elem)
             }
         }
