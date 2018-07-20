@@ -49,7 +49,7 @@ class Home extends React.Component {
     }
 
     handleMouseLeve =(e, i) => {
-        console.log("title");
+        // console.log("title");
         this.setState ({
             targetOpacity: -1,
             title: -1
@@ -84,7 +84,7 @@ class Home extends React.Component {
     }
 
     render() {
-        console.log(this.state.active)
+        // console.log(this.state.active)
             const arrActiv = [];
             if( this.props.data.length > 0 ) {
 
