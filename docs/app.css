@@ -418,6 +418,11 @@ p.about_text_p_s {
     .contact_container .contact_holder_text,
     .contact_container .contact_text {
       padding: 10px; } }
+  .contact_container .contact_text_citation {
+    margin-top: 6px;
+    color: #414141;
+    font-weight: 300;
+    font-style: italic; }
   .contact_container .contact_holder_text {
     padding: 2rem; }
   .contact_container .contact_holder_form .form {
