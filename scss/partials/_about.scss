@@ -1,18 +1,9 @@
-
 .about {
   margin-top: 6rem;
-  justify-content: space-between;
+  //justify-content: space-between;
 
   .col-6 {
     padding: 1rem;
-
-    .about_text {
-      color: map-get($colors, text);
-      @include mobile {
-        padding-right: 15px;
-        margin-right: 10px;
-      }
-    }
   }
   .about_holder_img {
     //-moz-box-shadow:    inset 0 0 10px #000000;
@@ -28,7 +19,6 @@
       @include mobile {
         width: 95%;
       }
-
     }
   }
 }
@@ -39,10 +29,37 @@
   @include mobile {
     padding-left: 18rem;
   }
+}
+
+p.about_text_p {
+  margin-top: 6px;
+  color: map-get($colors, text);
+  text-align: justify;
+  strong {
+    font-weight: 700;
+    margin-top: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  @include mobile {
+    padding-right: 15px;
+    margin-right: 10px;
+  }
+}
+
+p.about_text_p_s {
+  margin-top: 6px;
+  color: map-get($colors, text);
+  font-weight: 700;
 
 }
 
-
+.about_text_p_d {
+  margin-top: 6px;
+  color: map-get($colors, text);
+  font-weight: 300;
+  font-style: italic;
+}
 
 
 

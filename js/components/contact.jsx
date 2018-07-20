@@ -155,17 +155,17 @@ class Contact extends React.Component {
             <section className="contact">
                 <div className="container">
                     <div className="contact_container container-grid">
-                        <div className="col-6 about_holder_text">
+                        <div className="col-6 contact_holder_text">
                             <p className="contact_text">
                                 Jeśli chcesz się ze mną coś narysować, wyślij wiadomość. Na pewno się odezwę!
                                 <hr/>
-                                    And God said, “it is good, she and I will dance.”
+                                <p className="contact_text_citation"> And God said, “it is good, she and I will dance.”</p>
                             </p>
                             <p>
                                 {/*{this.state.validEndText}*/}
                             </p>
                         </div>
-                        <div className="col-6 about_holder_form">
+                        <div className="col-6 contact_holder_form">
                             <Form/>
 
                         </div>

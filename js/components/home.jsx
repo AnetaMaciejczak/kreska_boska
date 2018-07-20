@@ -16,22 +16,14 @@ class Home extends React.Component {
 
     handleClick = () => {
         if(this.state.active < this.props.data.length){
-            // if (this.props.data.length % 3 === 0) {
 
                 this.setState({
-                    active: this.state.active + 3,
-
-                    active: this.props.data.length % 3 === 0
-                            ? this.state.active + 3
-                            : this.state.active + (this.props.data.length - this.state.active),
+                    active: (this.props.data.length % 3 != 0) && (this.props.data.length - this.state.active < 3) ?
+                        this.state.active + (this.props.data.length - this.state.active):
+                        this.state.active + 3,
                     targetZoom: -1
                 })
-            // } else {
-            //     this.setState({
-            //         active: this.state.active + (this.props.data.length - this.state.active),
-            //     })
-            //
-            // }
+
         }
     }
 
@@ -45,7 +37,6 @@ class Home extends React.Component {
         } else {
             this.setState ({
                 targetZoom: -1,
-
             })
         }
     }
@@ -102,14 +93,14 @@ class Home extends React.Component {
                    let data = this.props.data[i].content;
 
                    const isZoom = this.state.targetZoom === i ? "galleryImgZoom" : "";
-                   const isOpacity = this.state.targetOpacity === i ? "galleryOpacity" : "";
+                   const isOpacity = (this.state.targetOpacity != i) && (this.state.targetOpacity != -1) ?
+                       "galleryOpacity" :
+                       "";
 
                    let allClass = `${isOpacity} home_gallery_img ${isZoom}`
-
                    const display = this.state.title === i ? "home_gallery_display": "";
 
                    let allTitleClass = `${display} home_gallery_title`
-
                    const elem =  <div  key={[i]} className="col-4 home_gallery_holder_img">
 
                                    <img

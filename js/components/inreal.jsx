@@ -14,14 +14,12 @@ class Inreal extends React.Component {
 
     handleClick = () => {
         if(this.state.active < this.props.data.length){
-            // if (this.props.data.length % 3 === 0) {
                 this.setState({
-                    active: this.props.data.length % 3 === 0 ?
-                        this.state.active + 3:
-                        this.state.active + (this.props.data.length - this.state.active),
+                    active: (this.props.data.length % 3 != 0) && (this.props.data.length - this.state.active < 3) ?
+                        this.state.active + (this.props.data.length - this.state.active):
+                        this.state.active + 3,
                     targetZoomInreal: -1
                 })
-            // }
         }
     }
     handleClickImg = (e, i) => {
@@ -90,7 +88,9 @@ class Inreal extends React.Component {
                 let data = this.props.data[i].content;
 
                 const isZoom = this.state.targetZoomInreal === i ? "galleryImgZoomInreal" : "";
-                const isOpacity = this.state.targetOpacityInreal === i ? "galleryOpacity" : "";
+                const isOpacity = (this.state.targetOpacityInreal != i) && (this.state.targetOpacityInreal != -1)
+                    ? "galleryOpacity"
+                    : "";
 
                 let allClass = `${isOpacity} inreal_gallery_img ${isZoom}`
 

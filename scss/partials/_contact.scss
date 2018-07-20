@@ -5,16 +5,16 @@
   @include mobile {
     margin-top: 5rem;
   }
-  .about_holder_text,
+  .contact_holder_text,
   .contact_text {
     @include mobile{
       padding: 10px;
     }
   }
-  .about_holder_text {
+  .contact_holder_text {
     padding: 2rem;
   }
-  .about_holder_form {
+  .contact_holder_form {
     .form {
       display: flex;
       flex-direction: column;
