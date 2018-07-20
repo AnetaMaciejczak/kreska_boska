@@ -127,11 +127,11 @@ class Home extends React.Component {
                 </div>
                     <a onClick={this.scrollToTop}>
                         <img className="upInreal"
-                         src= "../../img/angle-up.png"/>
+                         src= "./img/angle-up.png"/>
                     </a>
                     <Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
                         <img className="downInreal"
-                     src= "../../img/if_angle-double-down.png"
+                     src= "./img/if_angle-double-down.png"
                      onClick={this.handleClick}/>
                     </Link>
         </section>

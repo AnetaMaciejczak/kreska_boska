@@ -9,14 +9,14 @@ class Footer extends React.Component {
                     <a href="https://www.facebook.com/KreskaBoska/"
                        target="_blank"
                        className="footer_facebook_icon">
-                        <img className="footer_facebook_img" src="../../img/facebook.png"/>
+                        <img className="footer_facebook_img" src="./img/facebook.png"/>
                     {/*<i className="fab fa-facebook-square"></i>*/}
                     </a>
 
                     <a href="https://www.instagram.com/kreska.boska/"
                        target="_blank"
                        className="footer_instagram_icon">
-                        <img className="footer_instagram_img" src="../../img/instagram.png"/>
+                        <img className="footer_instagram_img" src="./img/instagram.png"/>
                     </a>
 
                 </div>

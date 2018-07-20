@@ -33,11 +33,11 @@ class Header extends React.Component {
                 <div className="container">
                     <header className="header">
                         <p id="header_holder_logo">
-                            <img id="header_logo" src="../../img/logo_line.png" alt=""/>
+                            <img id="header_logo" src="./img/logo_line.png" alt=""/>
                         </p>
 
                         <img    className ="header_hamburger"
-                                src="../../img/if_menu_926652.png"
+                                src="./img/if_menu_926652.png"
                                 onClick={this.handleHamburgerClick}/>
 
                         <ul onClick= {this.handleManuClick} className="header_menu" style={{opacity: this.state.menuStyle}}>
