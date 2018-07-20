@@ -47,8 +47,6 @@ class Inreal extends React.Component {
         })
     }
 
-
-
     componentDidMount () {
         Events.scrollEvent.register('begin', function(to, element) {
             console.log("begin", arguments);
@@ -78,7 +76,6 @@ class Inreal extends React.Component {
     //     console.log(to);
     // }
 
-
     render() {
         const arrActivInreal = [];
 
@@ -106,8 +103,6 @@ class Inreal extends React.Component {
                 arrActivInreal.push(elem)
             }
         }
-        // console.log(arrActivInreal);
-        // console.log(this.state.active);
 
         return (
             <section className="inreal">
@@ -127,7 +122,6 @@ class Inreal extends React.Component {
                 </Link>
                 <Element name="test1" className="element"/>
             </section>
-
         )
     }
 }

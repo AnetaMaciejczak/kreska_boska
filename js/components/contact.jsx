@@ -157,8 +157,8 @@ class Contact extends React.Component {
                     <div className="contact_container container-grid">
                         <div className="col-6 contact_holder_text">
                             <p className="contact_text">
-                                Jeśli chcesz się ze mną coś narysować, wyślij wiadomość. Na pewno się odezwę!
-                                <hr/>
+                                <p>Jeśli chcesz się ze mną coś narysować, wyślij wiadomość. Na pewno się odezwę!</p>
+                                {/*<hr/>*/}
                                 <p className="contact_text_citation"> And God said, “it is good, she and I will dance.”</p>
                             </p>
                             <p>

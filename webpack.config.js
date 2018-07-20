@@ -56,14 +56,14 @@ module.exports = function(env) {
                 {
                     test: /\.(jpg|jpeg|gif|png|csv)$/,
                     use: {
-                        loader: 'file-loader',
+                        loader: 'file-loader?outputPath=images/',
                         options: {
                             name: '[name].[ext]',
-                            publicPath: 'images',
-                            outputPath: 'images'
+                            useRelativePath: true
                         }
                     }
                 },
+
                 {
                     test: /\.(eot|ttf|woff|woff2)$/,
                     use: {

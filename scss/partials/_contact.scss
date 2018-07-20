@@ -11,6 +11,12 @@
       padding: 10px;
     }
   }
+  .contact_text_citation {
+    margin-top: 6px;
+    color: map-get($colors, text);
+    font-weight: 300;
+    font-style: italic;
+  }
   .contact_holder_text {
     padding: 2rem;
   }
