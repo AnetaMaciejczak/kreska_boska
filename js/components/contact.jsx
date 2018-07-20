@@ -141,7 +141,7 @@ class Form extends React.Component {
                 </label>
 
                 <span className="form_button_span">
-                    <input className="form_button_submit" type="submit" value="Wyśli" ></input>
+                    <input className="form_button_submit" type="submit" value="Wyślij" ></input>
                 </span>
             </form>
         );

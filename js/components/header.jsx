@@ -42,18 +42,18 @@ class Header extends React.Component {
 
                         <ul onClick= {this.handleManuClick} className="header_menu" style={{opacity: this.state.menuStyle}}>
                             <li>
-                                <Link to="/">Home</Link>
+                                <Link replace to="/">Home</Link>
                             </li>
                             <li>
-                                <Link to="/inreal">InReal</Link>
+                                <Link replace to="/inreal">InReal</Link>
 
                             </li>
                             <li>
-                                <Link to="/about">About</Link>
+                                <Link replace to="/about">About</Link>
 
                             </li>
                             <li>
-                                <Link to="/contact">Kontakt</Link>
+                                <Link replace to="/contact">Kontakt</Link>
                             </li>
                         </ul>
                     </header>
