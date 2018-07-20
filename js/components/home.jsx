@@ -41,10 +41,6 @@ class Home extends React.Component {
         }
     }
 
-    handleClickAll = (e, i) => {
-        console.log("klika sobie");
-    }
-
     handleMouseEnter = (e, i) => {
         this.setState ({
             targetOpacity: i,
@@ -124,7 +120,7 @@ class Home extends React.Component {
 
         return  (
             <section className="home" >
-                <div  onClick={e => this.handleClickAll(e, i)} className="container">
+                <div  className="container">
                     <div className="home_gallery container-grid">
                     {arrActiv}
                     </div><Element name="test1" className="element"/>

@@ -34,19 +34,19 @@ class App extends React.Component {
             .then( response => {
 
                 const dataArr = response.data.stories;
-                console.log("all:", dataArr);
+                // console.log("all:", dataArr);
 
                 const dataHomeArr = dataArr.filter( item => {
                     return item.content.categorie === "home";
                 })
 
-                console.log("home",dataHomeArr)
+                // console.log("home",dataHomeArr)
 
                 const dataInrealArr = dataArr.filter(item => {
                     return item.content.categorie === "inreal"
                 })
                 
-                console.log("inreal", dataInrealArr);
+                // console.log("inreal", dataInrealArr);
 
                 this.setState({
                     /*tutaj podmienić do właściewgo state*/

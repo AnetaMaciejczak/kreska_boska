@@ -56,7 +56,7 @@ module.exports = function(env) {
                 {
                     test: /\.(jpg|jpeg|gif|png|csv)$/,
                     use: {
-                        loader: 'file-loader?outputPath=images/',
+                        loader: 'file-loader?outputPath=img/',
                         options: {
                             name: '[name].[ext]',
                             useRelativePath: true
