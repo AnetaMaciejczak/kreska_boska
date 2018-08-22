@@ -18,10 +18,10 @@ class Home extends React.Component {
         if(this.state.active < this.props.data.length){
 
                 this.setState({
-                    active: (this.props.data.length % 3 != 0) && (this.props.data.length - this.state.active < 3) ?
-                        this.state.active + (this.props.data.length - this.state.active):
-                        this.state.active + 3,
-                    targetZoom: -1
+                    active: (this.props.data.length % 3 != 0) && (this.props.data.length - this.state.active < 3)
+                        ? this.state.active + (this.props.data.length - this.state.active)
+                        : this.state.active + 3,
+                    targetZoom: -1,
                 })
 
         }
@@ -42,9 +42,19 @@ class Home extends React.Component {
     }
 
     handleMouseEnter = (e, i) => {
+        if (this.state.targetZoom !== i) {
+            this.setState ({
+                title: i,
+            })
+        } else {
+            this.setState ({
+                title: -1,
+            })
+        }
+
         this.setState ({
             targetOpacity: i,
-            title: i
+/*            title: i*/
         })
     }
 

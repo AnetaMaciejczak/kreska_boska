@@ -12,12 +12,13 @@ class Header extends React.Component {
     }
 
     handleHamburgerClick = () => {
-        this.state.menuStyle === 0 ?
-        this.setState ({
-            menuStyle: 1,
-        })
+        this.state.menuStyle === 0
+            ? this.setState ({
+                menuStyle: 1,
+            })
             : this.setState ({
-            menuStyle: 0})
+            menuStyle: 0
+            })
     }
 
     handleManuClick = () => {
@@ -33,7 +34,14 @@ class Header extends React.Component {
                 <div className="container">
                     <header className="header">
                         <p id="header_holder_logo">
-                            <img id="header_logo" src="./img/logo_line.png" alt=""/>
+
+                            <Link replace to="/">
+                                <img id="header_logo"
+                                     src="./img/logo_line.png"
+                                     alt=""
+                                />
+                            </Link>
+
                         </p>
 
                         <img    className ="header_hamburger"
